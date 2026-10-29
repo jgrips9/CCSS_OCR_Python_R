@@ -112,7 +112,7 @@ OCR_function <- function(filename){
 suppressWarnings({
   
   OCR_function(
-    "github_samples\\sample scanned letter.pdf"
+    "..\\github_samples\\sample scanned letter.pdf"
   )
   
 })
@@ -120,7 +120,7 @@ suppressWarnings({
 
 #Now perform this process for all pdf files inside a directory
 pdf_files <- list.files(
-  path = paste(getwd(), "/github_samples", sep = ""),
+  path = "../github_samples",
   pattern = "\\.pdf$",
   full.names = TRUE
 )
@@ -186,7 +186,7 @@ process_page <- function(page_num, pdf_file){
   )
 }
 
-filename = "github_samples/CommonOwnership_scanned.pdf"
+filename = "../github_samples/CommonOwnership_scanned.pdf"
 page_count <- pdf_info(filename)$pages
 
 ncores <- 8
